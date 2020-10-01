@@ -4,7 +4,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import java.time.LocalDate;
 
 public class SaveAlbum {
     public static void main(String[] args) {
@@ -27,8 +26,8 @@ public class SaveAlbum {
             tracksAlbumOne.setTrackTitle("Disintegrate Slowly");
             tracksAlbumOne.setTrackTitle("Keep On Breathing");
 
+            //em.persist(tracksAlbumOne);
             em.persist(albumOne);
-
 
             tx.commit();
             System.out.println("Album Saved Saved");

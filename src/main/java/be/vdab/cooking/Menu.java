@@ -1,3 +1,4 @@
+/*
 package be.vdab.cooking;
 
 import javax.persistence.*;
@@ -39,3 +40,4 @@ public class Menu {
         this.ingredients = ingredients;
     }
 }
+*/

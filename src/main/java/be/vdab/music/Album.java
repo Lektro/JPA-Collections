@@ -3,8 +3,10 @@ package be.vdab.music;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
+@Table (name ="ALBUMS", uniqueConstraints = {@UniqueConstraint(columnNames ="id")})
 public class Album {
 
     @Id
@@ -60,7 +62,15 @@ public class Album {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Album)) return false;
+        Album album = (Album) o;
+        return getId() == album.getId();
+    }
+
+    @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(getId());
     }
 }

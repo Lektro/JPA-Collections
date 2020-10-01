@@ -1,3 +1,4 @@
+/*
 package be.vdab.cooking;
 
 import javax.persistence.Embeddable;
@@ -28,3 +29,4 @@ public class Ingredient {
         this.name = name;
     }
 }
+*/

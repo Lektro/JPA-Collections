@@ -7,7 +7,7 @@ public class Tracks {
 
     @Column(name="ALBUM_ID")
     private int albumId;
-    @Column(name="TRACK_TITLE")
+    @Column(name="ALBUM_TRACK_TITLE")
     private String trackTitle;
 
     public int getAlbumId() {
