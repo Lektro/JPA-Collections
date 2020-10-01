@@ -2,6 +2,7 @@ package be.vdab.music;
 
 import javax.persistence.*;
 
+/// one to many relation
 @Embeddable
 public class Tracks {
 
