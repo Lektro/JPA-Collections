@@ -9,18 +9,29 @@ public class Album {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name="ID")
+    private int id;
+
+    @Column(name="TITLE")
     private String title;
+
+    @Column(name="AUTHOR")
     private String author;
 
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name ="trackTitle", column = @Column(name = "ALBUM_TRACK_TITLE"))
+    })
+
     @ElementCollection
+    @Column(name="TRACKS")
     private List<String> tracks = new ArrayList<>();
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -46,5 +57,10 @@ public class Album {
 
     public void setTracks(List<String> tracks) {
         this.tracks = tracks;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

@@ -17,18 +17,19 @@ public class SaveAlbum {
             EntityTransaction tx = em.getTransaction();
             tx.begin();
             Album albumOne = new Album();
+            Tracks tracksAlbumOne = new Tracks();
 
             albumOne.setTitle("See Without Eyes");
             albumOne.setAuthor("The Glitch Mob");
 
-            Tracks tracksAlbumOne = new Tracks();
             tracksAlbumOne.setTrackTitle("Enter Formless");
             tracksAlbumOne.setTrackTitle("Take Me With You");
             tracksAlbumOne.setTrackTitle("Disintegrate Slowly");
             tracksAlbumOne.setTrackTitle("Keep On Breathing");
 
-
             em.persist(albumOne);
+
+
             tx.commit();
             System.out.println("Album Saved Saved");
 

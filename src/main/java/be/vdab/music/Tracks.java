@@ -1,11 +1,13 @@
 package be.vdab.music;
 
-import javax.persistence.Embeddable;
+import javax.persistence.*;
 
 @Embeddable
 public class Tracks {
 
+    @Column(name="ALBUM_ID")
     private int albumId;
+    @Column(name="TRACK_TITLE")
     private String trackTitle;
 
     public int getAlbumId() {
