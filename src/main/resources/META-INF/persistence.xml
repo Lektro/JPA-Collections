@@ -18,6 +18,7 @@
             <property name="hibernate.use_sql_comments" value="true"/>
         </properties>
     </persistence-unit>
+
     <!-- name is ref in java programma  -->
     <persistence-unit name="read" transaction-type="RESOURCE_LOCAL">
         <properties>
