@@ -22,11 +22,12 @@ public class Album {
 
     @Embedded
     @AttributeOverrides({
-            @AttributeOverride(name ="trackTitle", column = @Column(name = "ALBUM_TRACK_TITLE"))
+            @AttributeOverride(name ="trackTitle", column = @Column(name = "TRACK_TITLE"))
     })
 
     @ElementCollection
     @Column(name="TRACKS")
+    @CollectionTable()
     private List<String> tracks = new ArrayList<>();
 
     public int getId() {

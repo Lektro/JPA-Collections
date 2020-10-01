@@ -5,9 +5,10 @@ import javax.persistence.*;
 @Embeddable
 public class Tracks {
 
-    @Column(name="ALBUM_ID")
+    @EmbeddedId
+    @Column(name="ID")
     private int albumId;
-    @Column(name="ALBUM_TRACK_TITLE")
+    @Column(name="TRACK_TITLE")
     private String trackTitle;
 
     public int getAlbumId() {
