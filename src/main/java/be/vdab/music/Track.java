@@ -3,13 +3,13 @@ package be.vdab.music;
 import javax.persistence.*;
 
 /// one to many relation
-@Embeddable
+//@Embeddable
 public class Track {
 
-    @EmbeddedId
-    @Column(name="ALBUM_ID")
+    //@EmbeddedId
+   // @Column(name="ALBUM_ID")
     private int albumId;
-    @Column(name="TRACK_TITLE")
+   @Column(name="TRACK_TITLE")
     private String trackTitle;
 
     public int getAlbumId() {

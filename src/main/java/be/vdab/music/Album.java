@@ -3,7 +3,6 @@ package be.vdab.music;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Table (name ="ALBUMS", uniqueConstraints = {@UniqueConstraint(columnNames ="id")})
@@ -20,14 +19,14 @@ public class Album {
     @Column(name="AUTHOR")
     private String author;
 
-    @Embedded
+/*    @Embedded
     @AttributeOverrides({
             @AttributeOverride(name ="trackTitle", column = @Column(name = "TRACK_TITLE"))
-    })
+    })*/
 
     @ElementCollection
-    @Column(name="TRACK")
-    @CollectionTable()
+/*    @Column(name="TRACK")
+    @CollectionTable(name =)*/
     private List<String> tracks = new ArrayList<>();
 
     public int getId() {
