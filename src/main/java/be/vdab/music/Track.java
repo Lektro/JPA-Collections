@@ -4,10 +4,10 @@ import javax.persistence.*;
 
 /// one to many relation
 @Embeddable
-public class Tracks {
+public class Track {
 
     @EmbeddedId
-    @Column(name="ID")
+    @Column(name="ALBUM_ID")
     private int albumId;
     @Column(name="TRACK_TITLE")
     private String trackTitle;

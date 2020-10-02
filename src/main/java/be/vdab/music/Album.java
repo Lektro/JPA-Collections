@@ -26,7 +26,7 @@ public class Album {
     })
 
     @ElementCollection
-    @Column(name="TRACKS")
+    @Column(name="TRACK")
     @CollectionTable()
     private List<String> tracks = new ArrayList<>();
 
