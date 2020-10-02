@@ -61,17 +61,4 @@ public class Album {
     public void setTracks(List<String> tracks) {
         this.tracks = tracks;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Album)) return false;
-        Album album = (Album) o;
-        return getId() == album.getId();
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
 }
