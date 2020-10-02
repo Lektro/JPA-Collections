@@ -17,6 +17,7 @@ public class SaveAlbum {
             em = emf.createEntityManager();
             EntityTransaction tx = em.getTransaction();
             tx.begin();
+
             Album albumOne = new Album();
             List<String> tracks = new ArrayList<>();
 
@@ -24,17 +25,13 @@ public class SaveAlbum {
             albumOne.setAuthor("The Glitch Mob");
 
             tracks.add(0, "Take Me With You");
-            //tracks.add("Take Me With You");
-            //tracks.add("Disintegrate Slowly");
-
-            //tracks.add(3, "Keep On Breathing");
-            //tracks.set(0,"Enter Formless");
+            tracks.add(1,"Disintegrate Slowly");
+            tracks.add(2, "Keep On Breathing");
+            tracks.add(3,"Enter Formless");
 
             albumOne.setTracks(tracks);
-            //albumOne.setTracks(albumOne);
-            //em.persist(tracks);
-            em.persist(albumOne);
 
+            em.persist(albumOne);
             tx.commit();
             System.out.println("Album Saved Saved");
 
